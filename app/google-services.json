@@ -1,0 +1,115 @@
+{
+  "project_info": {
+    "project_number": "223577424628",
+    "firebase_url": "https://piktoclean.firebaseio.com",
+    "project_id": "piktoclean",
+    "storage_bucket": "piktoclean.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223577424628:android:e8864e2519b6675b",
+        "android_client_info": {
+          "package_name": "piktoclean.com.gtdriver"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223577424628-5lb5gscrb72en0hj45fo18q273j960ge.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "piktoclean.com.gtdriver",
+            "certificate_hash": "93ce95c7da2e09a5475866ef8beb01b9026cf088"
+          }
+        },
+        {
+          "client_id": "223577424628-m1fctu00cl7deulnafj188fs57cpen7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdIHbDRkG9sMR3vworc8Di9jyX86DI-OA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223577424628-m1fctu00cl7deulnafj188fs57cpen7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:223577424628:android:72b8c7c4d2949f2f",
+        "android_client_info": {
+          "package_name": "piktoclean.com.pik_to_clean"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "223577424628-3btjqj4i42ora0l2l9trvd2ita63pi1n.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "piktoclean.com.pik_to_clean",
+            "certificate_hash": "93ce95c7da2e09a5475866ef8beb01b9026cf088"
+          }
+        },
+        {
+          "client_id": "223577424628-q9j5jsdhpvn7vonpg80dkjk16q2pdnb7.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "piktoclean.com.pik_to_clean",
+            "certificate_hash": "059e1411e6d011a8a70ca712ea4b89b1e9f5b79c"
+          }
+        },
+        {
+          "client_id": "223577424628-rnpnskggg507mcih8766c0pe618868ar.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "piktoclean.com.pik_to_clean",
+            "certificate_hash": "0ae02388be78d471d146fd2e8e9c6add049abc55"
+          }
+        },
+        {
+          "client_id": "223577424628-m1fctu00cl7deulnafj188fs57cpen7i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdIHbDRkG9sMR3vworc8Di9jyX86DI-OA"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "223577424628-m1fctu00cl7deulnafj188fs57cpen7i.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
