@@ -34,8 +34,8 @@ public class UserActivity extends AppCompatActivity {
         mGet = findViewById(R.id.btn1);
         tvName = findViewById(R.id.tx1);
         tvPhone = findViewById(R.id.tx2);
-        tvStart = findViewById(R.id.tx3);
-        tvName = findViewById(R.id.tx4);
+//        tvStart = findViewById(R.id.tx3);
+//        tvName = findViewById(R.id.tx4);
 /*
      db.collection("GTdriver").get()
              .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -59,9 +59,11 @@ public class UserActivity extends AppCompatActivity {
                     public void onEvent(QuerySnapshot documentSnapshots, FirebaseFirestoreException e) {
                         for (DocumentSnapshot ds : documentSnapshots) {
                             String firstname;
+                            Integer number;
 
-                            firstname = ds.getString("DName");
+                            firstname = ds.getString("Dname");
                             tvName.setText(firstname);
+
 
                         }
                     }

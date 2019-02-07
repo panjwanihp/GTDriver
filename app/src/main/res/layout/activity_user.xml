@@ -6,138 +6,68 @@
     android:layout_height="match_parent"
     tools:context=".UserActivity">
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="137dp"
-        android:text="End_Point"
-        android:textAlignment="center"
-        android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-        android:textColor="@color/colorPrimaryDark" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginTop="17dp"
         android:orientation="vertical"
         android:padding="16dp">
 
-        <TextView
-            android:id="@+id/tx1"
+
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="7dp"
-            android:text="Name"
-            android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:textColor="@color/colorPrimaryDark" />
+            android:layout_height="match_parent"
+            tools:context=".UserActivity">
 
-        <TextView
-            android:id="@+id/tx2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="7dp"
-            android:text="Phone"
-            android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:textColor="@color/colorPrimaryDark" />
 
-        <TextView
-            android:id="@+id/tx3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="7dp"
-            android:text="Start_Point"
-            android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:textColor="@color/colorPrimaryDark" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:orientation="vertical"
+                android:padding="16dp">
 
-        <TextView
-            android:id="@+id/tx4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="7dp"
-            android:text="End_Point"
-            android:textAlignment="center"
-            android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-            android:textColor="@color/colorPrimaryDark" />
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="Get Points"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent" />
 
-        <Button
-            android:id="@+id/btn1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="7dp"
-            android:text="View Driver"
-            android:textAllCaps="false"
-            android:textColor="@color/colorAccent" />
+                <Button
+                    android:id="@+id/btn1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="Start Mapping"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorAccent" />
 
-        <!--
-                  <EditText
-                      android:id="@+id/edittext_name"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginBottom="5dp"
-                      android:layout_marginTop="5dp"
-                      android:hint="Driver_name"
-                      android:padding="10dp" />
 
-                  <EditText
-                      android:id="@+id/edittext_phone"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginBottom="5dp"
-                      android:layout_marginTop="5dp"
-                      android:digits="0123456789."
-                      android:hint="Phone"
-                      android:inputType="numberDecimal"
-                      android:padding="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tx1"/>
 
-                  <EditText
-                      android:id="@+id/edittext_sp"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginBottom="5dp"
-                      android:layout_marginTop="5dp"
-                      android:digits="0123456789"
-                      android:hint="Start_Point"
-                      android:inputType="numberDecimal"
-                      android:padding="10dp" />
-                  <EditText
-                      android:id="@+id/edittext_ep"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginBottom="5dp"
-                      android:layout_marginTop="5dp"
-                      android:digits="0123456789"
-                      android:hint="End_Point"
-                      android:inputType="numberDecimal"
-                      android:padding="10dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/tx2"/>
 
-                  <Button
-                      android:id="@+id/button_save"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginTop="7dp"
-                      android:text="View"
-                      android:textAllCaps="false"
-                      android:textColor="@color/colorAccent" />
 
-                  <TextView
-                      android:id="@+id/textview_view_products"
-                      android:layout_width="match_parent"
-                      android:layout_height="wrap_content"
-                      android:layout_marginBottom="7dp"
-                      android:layout_marginTop="10dp"
-                      android:text="View Products"
-                      android:textAlignment="center"
-                      android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
-                      android:textColor="@color/colorPrimaryDark" />
-                      -->
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
 
 
     </LinearLayout>
