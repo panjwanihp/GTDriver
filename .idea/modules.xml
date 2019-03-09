@@ -3,8 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/AndroidStudioProjects-GTDriver.iml" filepath="$PROJECT_DIR$/AndroidStudioProjects-GTDriver.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/GTDriver.iml" filepath="$PROJECT_DIR$/.idea/GTDriver.iml" />
       <module fileurl="file://$PROJECT_DIR$/GTDriver.iml" filepath="$PROJECT_DIR$/GTDriver.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/GTDriver-app.iml" filepath="$PROJECT_DIR$/app/GTDriver-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

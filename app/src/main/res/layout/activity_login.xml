@@ -30,6 +30,14 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
+            <EditText
+                android:id="@+id/phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                android:hint="Phone"
+                android:inputType="number" />
+
 
             <EditText
                 android:id="@+id/editTextEmail"
