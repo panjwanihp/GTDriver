@@ -1,10 +1,13 @@
 package piktoclean.com.gtdriver;
 
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -26,8 +29,11 @@ public class LoginActivity extends AppCompatActivity  {
 
     private Button buttonRegister;
     private EditText loginEmailId;
-    private EditText logInpasswd;
+    private EditText logInpasswd; private EditText phone;
+    private SharedPreferences mpreference;
+    private SharedPreferences.Editor mEditor;
     private TextView textViewSignin;
+
 
     private ProgressDialog progressDialog;
 
@@ -44,6 +50,7 @@ public class LoginActivity extends AppCompatActivity  {
         loginEmailId = (EditText) findViewById(R.id.editTextEmail);
         logInpasswd = (EditText) findViewById(R.id.editTextPassword);
         textViewSignin = (TextView) findViewById(R.id.textViewSignin);
+        phone=(EditText) findViewById(R.id.phone);
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -77,7 +84,13 @@ public class LoginActivity extends AppCompatActivity  {
                             if (!task.isSuccessful()) {
                                 Toast.makeText(LoginActivity.this, "Wrong password", Toast.LENGTH_SHORT).show();
                             } else {
-                                startActivity(new Intent(LoginActivity.this, UserActivity.class));
+                                mpreference = getSharedPreferences("piktoclean.com.gtdriver", Context.MODE_PRIVATE);
+                                mEditor = mpreference.edit();
+                                mEditor.putString("user",phone.getText().toString());
+                                mEditor.commit();
+                                Intent inte=new Intent(LoginActivity.this, UserActivity.class);
+
+                                startActivity(inte);
                             }
                         }
                     });
