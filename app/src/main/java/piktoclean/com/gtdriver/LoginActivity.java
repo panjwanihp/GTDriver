@@ -50,7 +50,6 @@ public class LoginActivity extends AppCompatActivity  {
         loginEmailId = (EditText) findViewById(R.id.editTextEmail);
         logInpasswd = (EditText) findViewById(R.id.editTextPassword);
         textViewSignin = (TextView) findViewById(R.id.textViewSignin);
-        phone=(EditText) findViewById(R.id.phone);
         authStateListener = new FirebaseAuth.AuthStateListener() {
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
@@ -86,7 +85,7 @@ public class LoginActivity extends AppCompatActivity  {
                             } else {
                                 mpreference = getSharedPreferences("piktoclean.com.gtdriver", Context.MODE_PRIVATE);
                                 mEditor = mpreference.edit();
-                                mEditor.putString("user",phone.getText().toString());
+                                mEditor.putString("user",loginEmailId.getText().toString());
                                 mEditor.commit();
                                 Intent inte=new Intent(LoginActivity.this, UserActivity.class);
 

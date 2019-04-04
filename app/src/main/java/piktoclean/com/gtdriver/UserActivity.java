@@ -45,7 +45,7 @@ public class UserActivity extends AppCompatActivity {
 
     private FirebaseFirestore db;
     CollectionReference documentReference;
-    String Dphone,address;
+    String Dphone,address,Dmail;
     Uri picuri;
     int count=0;
     ArrayList<Point> arr = new ArrayList<Point>();
@@ -57,9 +57,9 @@ public class UserActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_user);
-        SharedPreferences pref = getSharedPreferences("ActivityPREF", Context.MODE_PRIVATE);
+      //  SharedPreferences pref = getSharedPreferences("ActivityPREF", Context.MODE_PRIVATE);
         SharedPreferences mpreference = getSharedPreferences("piktoclean.com.gtdriver", Context.MODE_PRIVATE);
-        Dphone= mpreference.getString("user","");
+        Dmail= mpreference.getString("user","");
         db = FirebaseFirestore.getInstance();
         documentReference = db.collection("GTdriver");
         listView = (ListView) findViewById(R.id.list);
@@ -69,7 +69,8 @@ public class UserActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot d : task.getResult()) {
-                        if(d.getString("Dphone").equals(Dphone)){
+                        if(d.getString("email").equals(Dmail)){
+                            Dphone=d.getString("Dphone");
                             start=new Point(d.getGeoPoint("Spoint").getLatitude(),d.getGeoPoint("Spoint").getLongitude());
                             end=new Point(d.getGeoPoint("Epoint").getLatitude(),d.getGeoPoint("Epoint").getLongitude());
                             break;
@@ -78,7 +79,7 @@ public class UserActivity extends AppCompatActivity {
                 }
             }
         });
-        Log.d("sdf",Dphone);
+//        Log.d("sdf",Dphone);
         dataModels = new ArrayList<>();
         mGet = findViewById(R.id.nav);
         CollectionReference Garbage = db.collection("Garbage");
@@ -87,7 +88,8 @@ public class UserActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<QuerySnapshot> task) {
                 if (task.isSuccessful()) {
                     for (QueryDocumentSnapshot d : task.getResult()) {
-                        if(d.getString("Dphone").equals(Dphone)){
+
+                        if(d.getString("Dphone")!=null && d.getString("Dphone").equals(Dphone)){
                             Geocoder geocoder;
                             List<Address> addresses;
                             geocoder = new Geocoder(UserActivity.this, Locale.getDefault());
